@@ -74,7 +74,7 @@
 html { scroll-behavior: smooth; font-size: 16px; background: var(--bg-main); }
 body {
   font-family: 'Manrope', sans-serif; background: var(--bg-main); color: var(--text-body);
-  overflow-x: hidden; -webkit-font-smoothing: antialiased; padding-top: 114px; /* Room space headroom mapping */
+  overflow-x: hidden; -webkit-font-smoothing: antialiased; padding-top: 114px;
 }
 a { text-decoration: none; color: inherit; }
 
@@ -93,7 +93,7 @@ h1, h2, h3, h4 { font-family: 'Urbanist', sans-serif; color: var(--primary); fon
   display: flex; align-items: center; overflow: hidden;
   font-size: 14px; font-weight: 700; box-shadow: 0 2px 12px rgba(255, 90, 54, 0.25);
 }
-.ticker-wrap { display: flex; width: 100%; padding-left: 100%; }
+.ticker-wrapper { display: flex; width: 100%; padding-left: 100%; }
 .ticker-move {
   display: inline-block; white-space: nowrap; padding-right: 100%;
   animation: marquee-run 24s linear infinite;
@@ -104,7 +104,7 @@ h1, h2, h3, h4 { font-family: 'Urbanist', sans-serif; color: var(--primary); fon
 }
 
 /* ════════════════════════════════════════
-   FIXED CAPSULE NAVIGATION FRAMEWORK (PERFECTLY SPACED)
+   FIXED CAPSULE NAVIGATION FRAMEWORK
 ════════════════════════════════════════ */
 .header-wrapper { position: fixed; top: 38px; left: 0; right: 0; z-index: 1000; padding: 12px 4%; display: flex; justify-content: center; }
 .navbar {
@@ -121,7 +121,6 @@ h1, h2, h3, h4 { font-family: 'Urbanist', sans-serif; color: var(--primary); fon
 .brand-title { font-size: 22px; font-weight: 800; color: var(--primary); letter-spacing: -0.5px; }
 .brand-title span { color: var(--brand-orange); }
 
-/* Perfect Native Clean Menu Item Spacing Codes */
 .nav-center { display: flex; gap: 24px; align-items: center; }
 .nav-center a { font-size: 16px; font-weight: 700; color: var(--primary); padding: 6px 4px; position: relative; transition: var(--transition); white-space: nowrap; }
 .nav-center a:hover { color: var(--brand-indigo); }
@@ -146,7 +145,7 @@ h1, h2, h3, h4 { font-family: 'Urbanist', sans-serif; color: var(--primary); fon
 .mobile-overlay a { font-family: var(--font-heading); font-size: 26px; color: var(--primary); font-weight: 800; }
 
 /* ════════════════════════════════════════
-   CRITICAL ASPECT AUTOMATED HERO CAROUSEL (NO CROP AT ALL)
+   HERO CAROUSEL
 ════════════════════════════════════════ */
 .slider-hero {
   position: relative; width: 100vw; overflow: hidden; background: #e2e8f0; box-shadow: var(--shadow-subtle);
@@ -154,17 +153,14 @@ h1, h2, h3, h4 { font-family: 'Urbanist', sans-serif; color: var(--primary); fon
 }
 .carousel-viewport { width: 100%; height: 100%; overflow: hidden; }
 .carousel-track { display: flex; width: 200%; height: 100%; transition: var(--transition-slide); will-change: transform; }
-
 .carousel-slide { width: 50%; height: 100%; position: relative; overflow: hidden; flex-shrink: 0; }
 .carousel-slide img { width: 100%; height: 100%; object-fit: fill; display: block; }
-
 .slider-controls { position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 2%; pointer-events: none; z-index: 10; }
 .sl-arrow {
   width: 46px; height: 46px; border-radius: 50%; background: rgba(255, 255, 255, 0.94); border: 1px solid var(--border-clean);
   color: var(--primary); font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-premium); transition: var(--transition); pointer-events: auto;
 }
 .sl-arrow:hover { background: var(--brand-indigo); color: #fff; border-color: var(--brand-indigo); }
-
 .carousel-dots { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 10; }
 .carousel-dot { width: 16px; height: 4px; background: rgba(15, 23, 42, 0.25); border: none; cursor: pointer; transition: var(--transition); border-radius: 2px; }
 .carousel-dot.active { background: var(--brand-indigo); width: 36px; }
@@ -188,14 +184,13 @@ section { padding: 90px 10%; position: relative; }
 .stats-container { background: var(--bg-card); display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--border-clean); box-shadow: var(--shadow-subtle); }
 .stat-item { padding: 36px 15px; text-align: center; border-right: 1px solid var(--border-clean); }
 .stat-item:last-child { border-right: none; }
-.stat-val { font-size: 42px; font-weight: 800; color: var(--brand-indigo); font-family: var(--font-heading); }
+.stat-val { font-size: 42px; font-weight: 800; color: var(--brand-indigo); }
 .stat-lbl { font-size: 12px; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 3px; }
 
-/* ABOUT PANEL (STABLE INTEGRATION) */
+/* ABOUT PANEL */
 #about { background: var(--bg-card); }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 .about-image-layout { position: relative; height: 460px; width: 100%; display: block; }
-/* EXACT PLACEMENT: Realtime Office Photo deployment configured cleanly */
 .ab-img-one { width: 78%; height: 85%; border-radius: var(--radius-xl); object-fit: cover; box-shadow: var(--shadow-wow); display: block; }
 .ab-img-two { position: absolute; bottom: 0; right: 0; width: 52%; height: 52%; border-radius: var(--radius-md); object-fit: cover; border: 8px solid #fff; box-shadow: var(--shadow-wow); display: block; }
 .about-text-column { display: flex; flex-direction: column; justify-content: center; }
@@ -208,20 +203,19 @@ section { padding: 90px 10%; position: relative; }
 .rooms-showcase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 26px; margin-top: 10px; }
 .room-tier-card { background: var(--bg-card); border: 1px solid var(--border-clean); border-radius: var(--radius-xl); padding: 38px 32px; box-shadow: var(--shadow-subtle); transition: var(--transition); }
 .room-tier-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-wow); border-color: rgba(79, 70, 229, 0.15); }
-.room-badge { background: var(--accent-light); color: var(--brand-indigo); font-size: 12px; font-weight: 800; padding: 4px 14px; border-radius: 20px; display: inline-block; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+.room-badge { background: rgba(79, 70, 229, 0.05); color: var(--brand-indigo); font-size: 12px; font-weight: 800; padding: 4px 14px; border-radius: 20px; display: inline-block; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
 .room-tier-card h3 { font-size: 25px; font-weight: 800; margin-bottom: 8px; }
 .room-features-list { list-style: none; margin-top: 20px; display: flex; flex-direction: column; gap: 12px; font-size: 15.5px; color: var(--text-body); font-weight: 500; }
 .room-features-list li { display: flex; align-items: center; gap: 8px; }
 .room-features-list li::before { content: '•'; color: var(--brand-orange); font-weight: bold; font-size: 20px; }
 
-/* SERVICES GRID SUITE */
+/* AMENITIES */
 #facilities { background: var(--bg-gradient); }
 .bento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 24px; }
 .bento-card { background: var(--bg-card); border: 1px solid var(--border-clean); border-radius: var(--radius-xl); padding: 46px 34px; transition: var(--transition); box-shadow: var(--shadow-subtle); border-left: 4px solid transparent; }
 .bento-card:nth-child(1n):hover { border-left-color: var(--brand-indigo); box-shadow: var(--shadow-wow); transform: translateY(-4px); }
 .bento-card:nth-child(2n):hover { border-left-color: var(--brand-orange); box-shadow: var(--shadow-gold); transform: translateY(-4px); }
 .bento-card:nth-child(3n):hover { border-left-color: var(--brand-teal); box-shadow: 0 15px 30px rgba(13, 148, 136, 0.12); transform: translateY(-4px); }
-
 .vector-icon-shield { width: 54px; height: 54px; background: var(--bg-main); color: var(--brand-indigo); display: flex; align-items: center; justify-content: center; border-radius: var(--radius-sm); margin-bottom: 22px; transition: var(--transition); }
 .vector-icon-shield svg { width: 26px; height: 26px; fill: currentColor; }
 .bento-card:nth-child(2n) .vector-icon-shield { color: var(--brand-orange); }
@@ -230,22 +224,28 @@ section { padding: 90px 10%; position: relative; }
 .bento-card h3 { font-size: 23px; font-weight: 800; color: var(--primary); margin-bottom: 12px; }
 .bento-card p { font-size: 15.5px; color: var(--text-body); line-height: 1.65; font-weight: 500; }
 
-/* DIET MANAGEMENT BLOCK */
+/* ════════════════════════════════════════
+   ENHANCED PROFESSIONAL FOOD DIET BLOCK
+════════════════════════════════════════ */
 #food-menu { background: var(--bg-card); }
-.menu-grid-board { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin-top: 15px; }
-.menu-column-box { background: var(--bg-main); border-radius: var(--radius-md); padding: 26px; border: 1px solid var(--border-clean); }
-.menu-column-box h4 { font-size: 19px; font-weight: 800; color: var(--brand-indigo); margin-bottom: 14px; border-bottom: 1px solid var(--border-heavy); padding-bottom: 8px; }
-.menu-items-list { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; color: var(--text-body); font-weight: 600; }
+.menu-table-wrapper { width: 100%; overflow-x: auto; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--border-clean); box-shadow: var(--shadow-subtle); margin-top: 30px; }
+.menu-table { width: 100%; border-collapse: collapse; text-align: left; min-width: 800px; }
+.menu-table th { background: var(--primary); color: #fff; padding: 18px; font-weight: 700; font-size: 15px; text-transform: uppercase; letter-spacing: 0.5px; }
+.menu-table td { padding: 18px; border-bottom: 1px solid var(--border-clean); font-size: 15px; font-weight: 600; vertical-align: top; line-height: 1.5; }
+.menu-table tr:nth-child(even) { background: #fdfdfd; }
+.menu-table tr:hover { background: rgba(79, 70, 229, 0.02); }
+.menu-day { font-weight: 800; color: var(--brand-indigo); font-size: 16px; }
+.tag-veg { color: var(--brand-teal); font-size: 11px; font-weight: 700; background: rgba(13, 148, 136, 0.08); padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 4px; }
+.tag-nonveg { color: var(--brand-orange); font-size: 11px; font-weight: 700; background: rgba(255, 90, 54, 0.08); padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 4px; }
+.food-divider { height: 1px; background: rgba(0,0,0,0.06); margin: 6px 0; }
 
-/* GOOGLE REVIEWS INDEX */
+/* REVIEWS */
 #reviews { background: var(--bg-main); }
 .reviews-dashboard { display: grid; grid-template-columns: 0.75fr 1.25fr; gap: 50px; align-items: center; }
 .google-rating-terminal { background: var(--bg-card); border: 1px solid var(--border-clean); border-radius: var(--radius-xl); padding: 48px 30px; text-align: center; box-shadow: var(--shadow-wow); }
 .google-brand-svg { width: 40px; margin-bottom: 12px; }
-.numeric-grade { font-size: 60px; font-weight: 800; color: var(--primary); font-family: var(--font-heading); }
+.numeric-grade { font-size: 60px; font-weight: 800; color: var(--primary); }
 .star-line-fill { color: #f59e0b; font-size: 22px; margin: 6px 0; letter-spacing: 2px; }
-.review-stats-lbl { font-size: 12px; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
-
 .feedback-stack { display: flex; flex-direction: column; gap: 20px; }
 .feedback-card { background: var(--bg-card); border: 1px solid var(--border-clean); border-radius: var(--radius-md); padding: 26px; transition: var(--transition); box-shadow: var(--shadow-subtle); }
 .reviewer-profile { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
@@ -255,91 +255,72 @@ section { padding: 90px 10%; position: relative; }
 .badge-verified-stay { font-size: 11px; color: #10b981; background: rgba(16, 185, 129, 0.08); padding: 4px 12px; border-radius: 20px; font-weight: 700; }
 .feedback-card p { font-size: 15px; font-style: italic; color: var(--text-body); font-weight: 500; }
 
-/* ════════════════════════════════════════
-   HIGH-HIGHLIGHTED 17-IMAGES RICH GALLERY SLIDER 🌟
-════════════════════════════════════════ */
+/* GALLERY */
 #gallery { background: var(--bg-gradient); border-top: 1px solid var(--border-clean); }
 .gallery-carousel-viewport {
   width: 100%; max-width: 1200px; margin: 0 auto; position: relative; overflow: hidden;
   border-radius: var(--radius-xl); box-shadow: var(--shadow-wow); background: var(--bg-card);
-  border: 1px solid var(--border-heavy); aspect-ratio: 16 / 9; 
+  border: 1px solid var(--border-clean); aspect-ratio: 16 / 9; 
 }
-/* Updated track width allocation matrix to support 17 slides (100 * 17) */
-.gallery-carousel-track { display: flex; height: 100%; width: 1700%; transition: var(--transition-gallery); will-change: transform; }
-
-/* Individual slide dimensions aligned for 17 images (100 / 17) */
-.gallery-slide { width: 5.8823%; height: 100%; flex-shrink: 0; position: relative; overflow: hidden; cursor: zoom-in; }
+.gallery-carousel-track { display: flex; height: 100%; width: 2300%; transition: var(--transition-gallery); will-change: transform; }
+.gallery-slide { width: 4.3478%; height: 100%; flex-shrink: 0; position: relative; overflow: hidden; cursor: zoom-in; }
 .gallery-slide img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.8s ease; }
 .gallery-slide:hover img { transform: scale(1.04); }
-
 .gallery-arrow {
   position: absolute; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%;
   background: rgba(255, 255, 255, 0.94); border: 1px solid var(--border-clean); color: var(--primary);
-  font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center;
-  box-shadow: var(--shadow-premium); transition: var(--transition); z-index: 10;
+  font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-premium); z-index: 10;
 }
 .gallery-arrow:hover { background: var(--brand-indigo); color: #fff; border-color: var(--brand-indigo); }
 .gallery-arrow.prev { left: 2%; }
 .gallery-arrow.next { right: 2%; }
-
 .gallery-dots { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; z-index: 10; }
-.gallery-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(15, 23, 42, 0.2); border: none; cursor: pointer; transition: var(--transition); }
+.gallery-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(15, 23, 42, 0.2); border: none; cursor: pointer; }
 .gallery-dot.active { background: var(--brand-indigo); transform: scale(1.2); }
 
 @media (max-width: 768px) {
   .gallery-carousel-viewport { aspect-ratio: 1 / 1; }
-  .gallery-arrow { width: 38px; height: 38px; font-size: 14px; }
 }
 
 .lightbox { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(255,255,255,0.98); align-items: center; justify-content: center; }
 .lightbox.open { display: flex; }
-.lightbox img { max-width: 85vw; max-height: 80vh; border-radius: var(--radius-md); box-shadow: var(--shadow-wow); border: 1px solid var(--border-heavy); }
+.lightbox img { max-width: 85vw; max-height: 80vh; border-radius: var(--radius-md); box-shadow: var(--shadow-wow); border: 1px solid rgba(0,0,0,0.1); }
 .lb-close { position: absolute; top: 30px; right: 30px; color: var(--primary); font-size: 32px; cursor: pointer; background: none; border: none; }
 
-/* PROTOCOLS REGISTRY */
+/* ════════════════════════════════════════
+   ELEGANT MULTI-COLUMN RULES MATRIX
+════════════════════════════════════════ */
 #rules-hub { background: var(--bg-card); border-top: 1px solid var(--border-clean); }
-.rules-layout-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 15px; }
-.rule-block-card { background: var(--bg-main); border-radius: var(--radius-md); padding: 32px; border: 1px solid var(--border-clean); }
-.rule-block-card h4 { font-size: 20px; font-weight: 800; margin-bottom: 14px; color: var(--primary); }
-.rule-points-list { list-style: none; display: flex; flex-direction: column; gap: 11px; font-size: 15.5px; color: var(--text-body); font-weight: 500; }
-.rule-points-list li { display: flex; gap: 10px; align-items: flex-start; }
-.rule-dots { color: var(--brand-orange); font-weight: bold; }
+.rules-grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; margin-top: 30px; }
+.rule-tile { background: var(--bg-main); border: 1px solid var(--border-clean); border-radius: var(--radius-sm); padding: 22px 24px; display: flex; gap: 16px; align-items: flex-start; transition: var(--transition); box-shadow: var(--shadow-subtle); }
+.rule-tile:hover { border-color: var(--brand-indigo); transform: translateY(-2px); background: #fff; box-shadow: var(--shadow-wow); }
+.rule-index { background: rgba(79, 70, 229, 0.08); color: var(--brand-indigo); font-weight: 800; font-size: 13px; min-width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%; flex-shrink: 0; }
+.rule-message { font-size: 15px; color: var(--text-body); font-weight: 600; line-height: 1.5; }
 
 .cta-band { background: var(--bg-card); border-top: 1px solid var(--border-clean); border-bottom: 1px solid var(--border-clean); padding: 75px 8%; text-align: center; }
 .cta-band h2 { font-size: clamp(25px, 3.5vw, 38px); font-weight: 800; line-height: 1.3; }
 
-/* ════════════════════════════════════════
-   CONTACT LAYOUT OVER FULL SCREEN GOOGLE MAP 📍
-════════════════════════════════════════ */
+/* CONTACT MAP FLOORPLAY */
 #contact { padding: 0; background: var(--bg-card); position: relative; height: 640px; width: 100%; display: flex; align-items: center; justify-content: flex-start; border-top: 1px solid var(--border-clean); }
 .iframe-canvas-backdrop { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; }
 .iframe-canvas-backdrop iframe { width: 100%; height: 100%; border: none; display: block; }
-
 .floating-contact-panel { position: relative; z-index: 5; margin-left: 8%; width: 100%; max-width: 450px; padding: 20px 0; }
-.terminal-contact-box {
-  background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
-  border: 1px solid rgba(79, 70, 229, 0.1); border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-wow);
-}
+.terminal-contact-box { background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border: 1px solid rgba(79, 70, 229, 0.1); border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-wow); }
 .terminal-top-banner { background: var(--bg-gradient); padding: 32px; border-bottom: 2px solid var(--brand-indigo); color: var(--primary); }
 .terminal-top-banner h3 { font-size: 24px; font-weight: 800; }
 .terminal-top-banner p { font-size: 14px; color: var(--text-muted); margin-top: 4px; font-weight: 600; }
 .terminal-core-body { padding: 36px; display: flex; flex-direction: column; gap: 26px; }
 .contact-row-node { display: flex; gap: 16px; align-items: flex-start; }
-.node-circle-wrap {
-  width: 42px; height: 42px; border-radius: 8px; background: rgba(79, 70, 229, 0.05); color: var(--brand-indigo);
-  display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid var(--border-clean);
-}
+.node-circle-wrap { width: 42px; height: 42px; border-radius: 8px; background: rgba(79, 70, 229, 0.05); color: var(--brand-indigo); display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid var(--border-clean); }
 .node-circle-wrap svg { width: 22px; height: 22px; fill: currentColor; }
 .node-details-wrap label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px; }
 .node-details-wrap a, .node-details-wrap p { font-size: 16.5px; color: var(--primary); font-weight: 700; }
-
 .pipeline-gps-link { border-top: 1px solid var(--border-clean); padding-top: 18px; margin-top: 4px; }
 .pipeline-gps-link a { color: var(--brand-indigo); font-weight: 800; font-size: 14.5px; display: inline-flex; align-items: center; gap: 6px; }
 
-/* CORPORATE LIGHT FOOTER */
+/* CORPORATE FOOTER */
 footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--text-body); font-size: 15px; border-top: 1px solid var(--border-clean); }
 .footer-main-row { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 60px; margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(15,23,42,0.08); }
-.footer-logo-block { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
 .footer-title-text { font-size: 24px; font-weight: 800; color: var(--primary); }
 .footer-title-text span { color: var(--brand-orange); }
 .footer-links-column h4 { font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--brand-indigo); margin-bottom: 20px; }
@@ -348,45 +329,26 @@ footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--tex
 .footer-nav-links a:hover { color: var(--brand-orange); transform: translateX(3px); }
 .footer-base-strip { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; font-size: 14px; color: var(--text-muted); font-weight: 500; }
 
-/* ════════════════════════════════════════
-   AUTOMATED ENQUIRY LEAD POPUP BOX
-════════════════════════════════════════ */
-.popup-modal-overlay {
-  position: fixed; inset: 0; z-index: 2000; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(10px);
-  display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.5s ease; padding: 20px;
-}
+/* WHATSAPP MODAL POPUP ENGINE */
+.popup-modal-overlay { position: fixed; inset: 0; z-index: 2000; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.5s ease; padding: 20px; }
 .popup-modal-overlay.show { opacity: 1; pointer-events: auto; }
-.popup-window-box {
-  background: #ffffff; width: 100%; max-width: 440px; border-radius: var(--radius-xl); border: 1px solid var(--border-heavy);
-  box-shadow: var(--shadow-wow); position: relative; overflow: hidden; transform: scale(0.9); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
+.popup-window-box { background: #ffffff; width: 100%; max-width: 440px; border-radius: var(--radius-xl); border: 1px solid rgba(0,0,0,0.08); box-shadow: var(--shadow-wow); position: relative; overflow: hidden; transform: scale(0.9); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
 .popup-modal-overlay.show .popup-window-box { transform: scale(1); }
 .popup-header { background: var(--bg-gradient); padding: 26px; border-bottom: 2px solid var(--brand-indigo); }
 .popup-header h3 { font-size: 24px; font-weight: 800; }
 .popup-header p { font-size: 14px; color: var(--text-muted); margin-top: 3px; font-weight: 500; }
 .popup-close-btn { position: absolute; top: 22px; right: 22px; border: none; background: none; font-size: 24px; cursor: pointer; color: var(--text-muted); }
 .popup-close-btn:hover { color: var(--brand-orange); }
-
 .popup-form-body { padding: 30px; display: flex; flex-direction: column; gap: 18px; }
 .form-input-node { display: flex; flex-direction: column; gap: 6px; }
 .form-input-node label { font-size: 13px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px; }
-.form-input-node input, .form-input-node select {
-  width: 100%; height: 48px; border: 1px solid var(--text-muted); border-radius: var(--radius-sm);
-  padding: 0 14px; font-size: 15.5px; font-family: inherit; font-weight: 600; outline: none; transition: var(--transition); background: #fff;
-}
+.form-input-node input, .form-input-node select { width: 100%; height: 48px; border: 1px solid #cbd5e1; border-radius: var(--radius-sm); padding: 0 14px; font-size: 15.5px; font-family: inherit; font-weight: 600; outline: none; transition: var(--transition); background: #fff; }
 .form-input-node input:focus, .form-input-node select:focus { border-color: var(--brand-indigo); box-shadow: 0 0 0 3px rgba(79,70,229,0.1); }
-.submit-popup-btn {
-  background: #25d366; color: #fff; height: 50px; border-radius: var(--radius-sm); font-weight: 700; font-size: 16px; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 6px 20px rgba(37,211,102,0.25); margin-top: 10px; transition: var(--transition);
-}
+.submit-popup-btn { background: #25d366; color: #fff; height: 50px; border-radius: var(--radius-sm); font-weight: 700; font-size: 16px; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 6px 20px rgba(37,211,102,0.25); margin-top: 10px; transition: var(--transition); }
 .submit-popup-btn:hover { background: #1ebe59; transform: translateY(-1px); }
 
-/* MOBILE APP WINDOW UTILITY ACTION DOCK */
-.app-action-dock {
-  position: fixed; bottom: 20px; left: 6%; right: 6%; height: 62px; z-index: 998;
-  background: rgba(15, 23, 42, 0.96); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
-  border-radius: 30px; display: none; align-items: center; justify-content: space-around; padding: 0 10px;
-  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.35);
-}
+/* BOTTOM FIXED DOCK */
+.app-action-dock { position: fixed; bottom: 20px; left: 6%; right: 6%; height: 62px; z-index: 998; background: rgba(15, 23, 42, 0.96); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-radius: 30px; display: none; align-items: center; justify-content: space-around; padding: 0 10px; box-shadow: 0 12px 35px rgba(15, 23, 42, 0.35); }
 .dock-item-link { display: flex; align-items: center; gap: 8px; color: #fff; font-size: 14.5px; font-weight: 700; padding: 10px 18px; border-radius: 20px; transition: var(--transition); }
 .dock-item-link svg { width: 18px; height: 18px; fill: currentColor; }
 .dock-item-link.dock-wa { background: #25d366; color: #fff; }
@@ -395,13 +357,12 @@ footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--tex
   .app-action-dock { display: flex; } 
 }
 
-/* INTERSECTION OBSERVER CODES */
+/* REVEAL ENGINE */
 .reveal { opacity: 0; transform: translateY(25px); transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1); }
 .reveal.in { opacity: 1; transform: translateY(0); }
 .delay-1 { transition-delay: 0.1s; }
 .delay-2 { transition-delay: 0.2s; }
 
-/* RESPONSIVE MATRIX OVERRIDES */
 @media (max-width: 1100px) {
   .about-grid, .reviews-dashboard, .bento-grid, .rooms-showcase-grid, .rules-layout-grid, .menu-grid-board { grid-template-columns: 1fr; gap: 35px; }
   .about-image-layout { height: 400px; }
@@ -435,7 +396,7 @@ footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--tex
   <nav class="navbar">
     <a href="#home" class="brand-wrapper">
       <div class="brand-logo">
-        <img src="https://res.cloudinary.com/dait7s8vv/image/upload/w_88,h_88,c_fill,q_auto,f_auto/Logo_u7bavm" alt="Naitik Hostel Branding Logo">
+        <img src="https://res.cloudinary.com/dait7s8vv/image/upload/w_88,h_88,c_fill,q_auto,f_auto/Logo_u7bavm" alt="Naitik Hostel Branding Logo Graphic">
       </div>
       <h2 class="brand-title">Naitik <span>Boy's Hostel</span></h2>
     </a>
@@ -444,9 +405,10 @@ footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--tex
       <a href="#about">About</a>
       <a href="#rooms">Rooms</a>
       <a href="#facilities">Facilities</a>
-      <a href="#food-menu">Food Menu</a>
+      <a href="#food-menu">Food Diet Chart</a>
       <a href="#reviews">Reviews</a>
       <a href="#gallery">Gallery</a>
+      <a href="#rules-hub">Rules</a>
       <a href="#contact">Contact</a>
     </div>
 
@@ -466,6 +428,7 @@ footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--tex
   <a href="#food-menu" onclick="closeMobile()">Food Diet Chart</a>
   <a href="#reviews" onclick="closeMobile()">Google Reviews</a>
   <a href="#gallery" onclick="closeMobile()">Gallery Portfolio</a>
+  <a href="#rules-hub" onclick="closeMobile()">Rules Hub</a>
   <a href="#contact" onclick="closeMobile()">Location & Contact</a>
 </div>
 
@@ -473,23 +436,18 @@ footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--tex
   <section class="slider-hero" id="home">
     <div class="carousel-viewport">
       <div class="carousel-track" id="carouselTrack">
-
         <div class="carousel-slide active">
-          <img src="https://res.cloudinary.com/dait7s8vv/image/upload/v1779876457/ChatGPT_Image_May_27_2026_03_37_05_PM_nhytri.png" alt="Naitik Boy's Hostel Premium High Definition Custom Banner Image 1">
+          <img src="https://res.cloudinary.com/dait7s8vv/image/upload/v1779868770/ChatGPT_Image_May_27_2026_01_27_17_PM_g7bnlr.png" alt="Naitik Boy's Hostel Panoramic Graphic Banner Image 1">
         </div>
-
         <div class="carousel-slide">
-          <img src="https://res.cloudinary.com/dait7s8vv/image/upload/v1779868771/ChatGPT_Image_May_27_2026_01_22_19_PM_e3hb2j.png" alt="Naitik Boy's Hostel Custom Panoramic Banner Image 2">
+          <img src="https://res.cloudinary.com/dait7s8vv/image/upload/v1779868771/ChatGPT_Image_May_27_2026_01_22_19_PM_e3hb2j.png" alt="Naitik Boy's Hostel Panoramic Graphic Banner Image 2">
         </div>
-
       </div>
     </div>
-
     <div class="slider-controls">
       <button class="sl-arrow" id="prevBtn" aria-label="Previous image Banner">←</button>
       <button class="sl-arrow" id="nextBtn" aria-label="Next image Banner">→</button>
     </div>
-
     <div class="carousel-dots">
       <button class="carousel-dot active" data-idx="0"></button>
       <button class="carousel-dot" data-idx="1"></button>
@@ -519,7 +477,7 @@ footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--tex
           <div class="bullet-node"><span class="bullet-icon">✓</span><p><strong>Advanced Security Protection:</strong> Deployed night vision CCTV surveillance recording camera loops combined with professional manual guard security shifting systems.</p></div>
         </div>
         <div style="margin-top:14px;">
-          <a href="tel:9431202864" class="btn-premium" style="background:var(--primary); color:#fff; padding:15px 32px; font-weight:800; border-radius:var(--radius-sm); display:inline-block; font-size:15px;">📞 Contact Office Desk</a>
+          <a href="tel:9431202864" class="nav-action-btn" style="padding:15px 32px; display:inline-block; font-size:15px;">📞 Contact Office Desk</a>
         </div>
       </div>
     </div>
@@ -531,7 +489,6 @@ footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--tex
       <h2 class="section-title">Our Premium <span>Room Sharing Tiers</span></h2>
       <p class="section-desc">Every single allocation unit is built to manage absolute comfort, clean air flow parameters, and robust furniture requirements.</p>
     </div>
-    
     <div class="rooms-showcase-grid">
       <article class="room-tier-card reveal">
         <span class="room-badge">Absolute Privacy</span>
@@ -575,7 +532,6 @@ footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--tex
       <h2 class="section-title">Highlighted <span>Premium Amenities</span></h2>
       <p class="section-desc">We emphasize robust core hardware infrastructure setups to make your everyday accommodation experience fully clean, seamless, and safe.</p>
     </div>
-    
     <div class="bento-grid">
       <article class="bento-card reveal">
         <div class="vector-icon-shield">
@@ -625,46 +581,73 @@ footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--tex
   <section id="food-menu">
     <div class="section-header reveal">
       <span class="section-badge">Hygienic Nutrition Track</span>
-      <h2 class="section-title">Daily Timetable <span>Nutrition Log</span></h2>
-      <p class="section-desc">Sample nutritional meal configuration logs systematically mapped out to ensure high energy limits for students.</p>
+      <h2 class="section-title">Weekly <span>Food Menu Schedule</span></h2>
+      <p class="section-desc">Ghar jaisa swad aur uchit poshan ke sath daily schedule map logic check loops parameters active.</p>
     </div>
 
-    <div class="menu-grid-board reveal">
-      <div class="menu-column-box">
-        <h4>Breakfast (Morning)</h4>
-        <ul class="menu-items-list">
-          <li>• Hot Fresh Milk / Premium Blended Tea</li>
-          <li>• Crispy Poori Sabzi / Warm Stuffed Parathas</li>
-          <li>• High Protein Eggs / Healthy Green Sprouts</li>
-          <li>• Clean Fresh Seasonal Fruits Platter</li>
-        </ul>
-      </div>
-      <div class="menu-column-box">
-        <h4>Lunch (Afternoon)</h4>
-        <ul class="menu-items-list">
-          <li>• Premium Steamed Rice / Hot Tawa Rotis</li>
-          <li>• Delicious Seasonal Vegetable Curry Platter</li>
-          <li>• High Protein Thick Lentils (Dal Fry)</li>
-          <li>• Organic Cucumber Salad & Spiced Raita</li>
-        </ul>
-      </div>
-      <div class="menu-column-box">
-        <h4>Snacks (Evening)</h4>
-        <ul class="menu-items-list">
-          <li>• Light Crunchy Fried Evening Snacks</li>
-          <li>• Premium Roasted Milk Tea Blend</li>
-          <li>• Traditional Crispy Samosas / Bakery Biscuits</li>
-        </ul>
-      </div>
-      <div class="menu-column-box">
-        <h4>Dinner (Night)</h4>
-        <ul class="menu-items-list">
-          <li>• Hot Fresh Butter Ghee Tawa Roti</li>
-          <li>• Delicious Shahi Paneer / Authentic Egg Curry</li>
-          <li>• Light Highly Digestible Dal Fry</li>
-          <li>• Festive Indian Sweets / Dessert Treats</li>
-        </ul>
-      </div>
+    <div class="menu-table-wrapper reveal">
+      <table class="menu-table">
+        <thead>
+          <tr>
+            <th>Days</th>
+            <th>Breakfast (7:30 AM to 9:30 AM)</th>
+            <th>Lunch (12:30 PM to 1:30 PM)</th>
+            <th>Dinner (7:30 PM to 9:30 PM)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="menu-day">Monday</td>
+            <td>कचौड़ी + छोला</td>
+            <td>चावल + दाल + सब्जी</td>
+            <td>रोटी + सब्जी + अचार</td>
+          </tr>
+          <tr>
+            <td class="menu-day">Tuesday</td>
+            <td>प्लेन पराठा + चटनी</td>
+            <td>चावल + दाल + भुजीया + चिप्स</td>
+            <td>रोटी + सेवई <div class="food-divider"></div><span class="tag-veg">(सब्जी राजमा + आलू)</span></td>
+          </tr>
+          <tr>
+            <td class="menu-day">Wednesday</td>
+            <td>रोटी + सब्जी</td>
+            <td>
+              <span class="tag-nonveg">Non Veg:</span> अंडा कड़ी / मछली + चावल
+              <div class="food-divider"></div>
+              <span class="tag-veg">Veg:</span> मटर पनीर + दाल + चावल
+            </td>
+            <td>रोटी + सब्जी + सलाद</td>
+          </tr>
+          <tr>
+            <td class="menu-day">Thursday</td>
+            <td>सत्तू पराठा + चटनी</td>
+            <td>बड़ी कड़ी + चावल + भुजीया</td>
+            <td>पूरी + छोला</td>
+          </tr>
+          <tr>
+            <td class="menu-day">Friday</td>
+            <td>रोटी + सब्जी</td>
+            <td>चावल + दाल + सब्जी + सलाद</td>
+            <td>तड़का + रोटी + भुजीया</td>
+          </tr>
+          <tr>
+            <td class="menu-day">Saturday</td>
+            <td>आलू पराठा / लिट्टी + चटनी + सब्जी</td>
+            <td>खिचड़ी / चावल + दाल + चोखा + पापड़</td>
+            <td>रोटी + सब्जी + हलुआ / खीर</td>
+          </tr>
+          <tr>
+            <td class="menu-day">Sunday</td>
+            <td>रोटी + सब्जी</td>
+            <td>
+              <span class="tag-nonveg">Non Veg:</span> चिकन + चावल
+              <div class="food-divider"></div>
+              <span class="tag-veg">Veg:</span> मटर पनीर + चावल + दाल
+            </td>
+            <td>रोटी + सब्जी + सलाद</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
@@ -674,9 +657,8 @@ footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--tex
         <svg class="google-brand-svg" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v3.92h6.61c-.29 1.53-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.65-5.17 3.65-8.58z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.11 0-5.74-2.11-6.68-4.96H1.21v3.15C3.18 21.88 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.32 14.24A7.16 7.16 0 0 1 4.91 12c0-.79.13-1.57.38-2.31V6.54H1.21A11.94 11.94 0 0 0 0 12c0 1.92.45 3.74 1.21 5.39l4.11-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.18 2.12 1.21 5.46l4.11 3.15c.94-2.85 3.57-4.96 6.68-4.96z"/></svg>
         <div class="numeric-grade">4.8</div>
         <div class="star-line-fill">★★★★★</div>
-        <div class="review-stats-lbl">150+ Google Business Reviews</div>
+        <div class="review-count">150+ Verified Google Reviews</div>
       </div>
-      
       <div class="feedback-stack">
         <article class="feedback-card">
           <div class="reviewer-profile">
@@ -688,7 +670,6 @@ footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--tex
           </div>
           <p>"The most reliable and safest hostel co-living workspace framework in the Patna area. Food quality and kitchen cleanliness parameters are perfectly balanced. Internet speeds are completely seamless for study loops."</p>
         </article>
-        
         <article class="feedback-card">
           <div class="reviewer-profile">
             <div class="p-meta-left">
@@ -712,7 +693,13 @@ footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--tex
     
     <div class="gallery-carousel-viewport reveal" id="gallerySlider">
       <div class="gallery-carousel-track" id="galleryTrack">
-        <div class="gallery-slide" onclick="openLb('https://res.cloudinary.com/dait7s8vv/image/upload/v1779876199/building_a3xylk.jpg')"><img src="https://res.cloudinary.com/dait7s8vv/image/upload/v1779876199/building_a3xylk.jpg" alt="Hostel Building Exterior View" loading="lazy"></div>
+        <div class="gallery-slide" onclick="openLb('https://res.cloudinary.com/dait7s8vv/image/upload/v1780204794/WhatsApp_Image_2026-05-27_at_5.00.27_PM_wndokg.jpg')"><img src="https://res.cloudinary.com/dait7s8vv/image/upload/v1780204794/WhatsApp_Image_2026-05-27_at_5.00.27_PM_wndokg.jpg" alt="Premium Living Room Stay" loading="lazy"></div>
+        <div class="gallery-slide" onclick="openLb('https://res.cloudinary.com/dait7s8vv/image/upload/v1780204794/WhatsApp_Image_2026-05-28_at_7.59.26_AM_kwiefx.jpg')"><img src="https://res.cloudinary.com/dait7s8vv/image/upload/v1780204794/WhatsApp_Image_2026-05-28_at_7.59.26_AM_kwiefx.jpg" alt="Hostel Amenity Vibe" loading="lazy"></div>
+        <div class="gallery-slide" onclick="openLb('https://res.cloudinary.com/dait7s8vv/image/upload/v1780204795/WhatsApp_Image_2026-05-28_at_7.59.29_AM_w0nvrx.jpg')"><img src="https://res.cloudinary.com/dait7s8vv/image/upload/v1780204795/WhatsApp_Image_2026-05-28_at_7.59.29_AM_w0nvrx.jpg" alt="Clean Furnished Space" loading="lazy"></div>
+        <div class="gallery-slide" onclick="openLb('https://res.cloudinary.com/dait7s8vv/image/upload/v1780204795/WhatsApp_Image_2026-05-27_at_4.59.32_PM_qf5ulv.jpg')"><img src="https://res.cloudinary.com/dait7s8vv/image/upload/v1780204795/WhatsApp_Image_2026-05-27_at_4.59.32_PM_qf5ulv.jpg" alt="Comfortable Bed Allocation" loading="lazy"></div>
+        <div class="gallery-slide" onclick="openLb('https://res.cloudinary.com/dait7s8vv/image/upload/v1780204794/WhatsApp_Image_2026-05-27_at_4.59.33_PM_ynwemk.jpg')"><img src="https://res.cloudinary.com/dait7s8vv/image/upload/v1780204794/WhatsApp_Image_2026-05-27_at_4.59.33_PM_ynwemk.jpg" alt="Hostel Infrastructure View" loading="lazy"></div>
+        <div class="gallery-slide" onclick="openLb('https://res.cloudinary.com/dait7s8vv/image/upload/v1780204795/WhatsApp_Image_2026-05-27_at_4.59.31_PM_jonlub.jpg')"><img src="https://res.cloudinary.com/dait7s8vv/image/upload/v1780204795/WhatsApp_Image_2026-05-27_at_4.59.31_PM_jonlub.jpg" alt="Premium Student Accommodation" loading="lazy"></div>
+        <div class="gallery-slide" onclick="openLb('https://res.cloudinary.com/dait7s8vv/image/upload/v1779876199/building_a3xylk.jpg')"><img src="https://res.cloudinary.com/dait7s8vv/image/upload/v1779876199/building_a3xylk.jpg" alt="Hostel Building Exterior Actual View" loading="lazy"></div>
         <div class="gallery-slide" onclick="openLb('https://res.cloudinary.com/dait7s8vv/image/upload/v1779862663/office_lpmfgm.jpg')"><img src="https://res.cloudinary.com/dait7s8vv/image/upload/w_600,h_400,c_fill,q_auto,f_auto/v1779862663/office_lpmfgm.jpg" alt="Hostel Office Desk Reception Vibe" loading="lazy"></div>
         <div class="gallery-slide" onclick="openLb('https://res.cloudinary.com/dait7s8vv/image/upload/v1779862663/gallary3_peovdm.jpg')"><img src="https://res.cloudinary.com/dait7s8vv/image/upload/v1779862663/gallary3_peovdm.jpg" alt="Hostel Room Setup" loading="lazy"></div>
         <div class="gallery-slide" onclick="openLb('https://res.cloudinary.com/dait7s8vv/image/upload/v1779862663/Gallary2_dc4akr.jpg')"><img src="https://res.cloudinary.com/dait7s8vv/image/upload/v1779862663/Gallary2_dc4akr.jpg" alt="Hostel Corridors" loading="lazy"></div>
@@ -730,45 +717,51 @@ footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--tex
         <div class="gallery-slide" onclick="openLb('https://res.cloudinary.com/dait7s8vv/image/upload/v1779862667/gallary6_fizksj')"><img src="https://res.cloudinary.com/dait7s8vv/image/upload/v1779862667/gallary6_fizksj.jpg" alt="Hostel Infrastructure Exterior" loading="lazy"></div>
         <div class="gallery-slide" onclick="openLb('https://res.cloudinary.com/dait7s8vv/image/upload/v1779862667/gallary5_m38s5j')"><img src="https://res.cloudinary.com/dait7s8vv/image/upload/v1779862667/gallary5_m38s5j.jpg" alt="Dining Mess Area" loading="lazy"></div>
       </div>
-      
-      <button class="gallery-arrow prev" id="galleryPrev" aria-label="Previous gallery image">←</button>
-      <button class="gallery-arrow next" id="galleryNext" aria-label="Next gallery image">→</button>
-      
+      <button class="gallery-arrow prev" id="galleryPrev">←</button>
+      <button class="gallery-arrow next" id="galleryNext">→</button>
       <div class="gallery-dots" id="galleryDots"></div>
     </div>
   </section>
 
   <div class="lightbox" id="lightbox" onclick="closeLb()">
     <button class="lb-close" onclick="closeLb()">✕</button>
-    <img id="lbImg" src="" alt="Zoom Image Layout Showcased Inside View Overlay Container">
+    <img id="lbImg" src="" alt="Zoom Image View Overlay">
   </div>
 
   <section id="rules-hub">
     <div class="section-header reveal">
       <span class="section-badge">Management Guidelines</span>
-      <h2 class="section-title">Hostel <span>Rules & Admission Logs</span></h2>
-      <p class="section-desc">Proper discipline parameters and guidelines deployment to execute a peaceful educational environment.</p>
+      <h2 class="section-title">Hostel <span>Rules & Regulations</span></h2>
+      <p class="section-desc">Anushasan aur shanti banaye rakhne ke liye hostel prashasan dwara nirdharit 26 niyam.</p>
     </div>
 
-    <div class="rules-layout-grid reveal">
-      <div class="rule-block-card">
-        <h4>Campus Rules & Regulations</h4>
-        <ul class="rule-points-list">
-          <li><span class="rule-dots">▪</span> The hostel main gate shutdown timing is strictly set at sharp 10:00 PM.</li>
-          <li><span class="rule-dots">▪</span> Strict Anti-Ragging workspace compliance rules. Zero tolerance bounds active.</li>
-          <li><span class="rule-dots">▪</span> Eco-friendly electricity logs. Fans and lights must be turned off when leaving rooms.</li>
-          <li><span class="rule-dots">▪</span> External visitors are permitted only inside the main communication lounge area.</li>
-        </ul>
-      </div>
-      <div class="rule-block-card">
-        <h4>Admission Process & Documents</h4>
-        <ul class="rule-points-list">
-          <li><span class="rule-dots">▪</span> Government Authorized Identity Record (Copy of Aadhaar Card is compulsory).</li>
-          <li><span class="rule-dots">▪</span> Verified Educational Institution Fee slip or active Corporate Employment ID.</li>
-          <li><span class="rule-dots">▪</span> Two passport size current colored profile photographs layout validation.</li>
-          <li><span class="rule-dots">▪</span> Parents/Local Guardian verification logs tracking criteria parameters registration.</li>
-        </ul>
-      </div>
+    <div class="rules-grid-layout reveal">
+      <div class="rule-tile"><div class="rule-index">1</div><div class="rule-message">नामांकन के समय आधार कार्ड की छाया प्रति तथा दो फोटो देना अनिवार्य होगा।</div></div>
+      <div class="rule-tile"><div class="rule-index">2</div><div class="rule-message">एक माह का किराया हमेशा एडवांस के रूप में जमा रहेगा।</div></div>
+      <div class="rule-tile"><div class="rule-index">3</div><div class="rule-message">हॉस्टल के अन्दर किसी तरह का नशा करना या करके आना सख्त मना है।</div></div>
+      <div class="rule-tile"><div class="rule-index">4</div><div class="rule-message">आप अपने सामान की सुरक्षा (जैसे-मोबाईल, ए.टी.एम. कार्ड, पैसा, साईकिल आदि) स्वयं करें।</div></div>
+      <div class="rule-tile"><div class="rule-index">5</div><div class="rule-message">पटना पुलिस के आदेशानुसार सभी छात्रों को अपना पहचान पत्र, पता एवं अपने माता-पिता की पहचान उपस्थिति कराना अनिवार्य होगा।</div></div>
+      <div class="rule-tile"><div class="rule-index">6</div><div class="rule-message">रूम से निकालते समय रूम का पंखा एवं बल्ब बंद करके जाएँ अन्यथा चालू पाये जाने पर 500/- जुर्माना लगेगा।</div></div>
+      <div class="rule-tile"><div class="rule-index">7</div><div class="rule-message">दिवार पर कांटी ठोकना, पोस्टर साटना सख्त मना है, पकड़े जाने पर दंड के भागी होंगे।</div></div>
+      <div class="rule-tile"><div class="rule-index">8</div><div class="rule-message">ताला की चाबी गुम होने पर कार्यालय में सम्पर्क करें। अपने से तोड़-फोड़ नहीं करें।</div></div>
+      <div class="rule-tile"><div class="rule-index">9</div><div class="rule-message">की पहचान की एक प्रति हॉस्टल कार्यालय में तथा एक प्रति स्थानीय पुलिस स्टेशन में रहती है इसलिए पहचान संबंधी जानकारी सही-सही दें।</div></div>
+      <div class="rule-tile"><div class="rule-index">10</div><div class="rule-message">हॉस्टल परिसर को साफ-सफाई रखने में अपना पूरा सहयोग करें, कूड़ा कचरा डस्टबीन में ही डाले। साथ ही शांति व्यवस्था में सहभागी बनें।</div></div>
+      <div class="rule-tile"><div class="rule-index">11</div><div class="rule-message">हॉस्टल परिसर में किसी भी दोस्त मित्र को लाना पूर्णतः प्रतिबंधित है, कार्यालय में ही मिलना है।</div></div>
+      <div class="rule-tile"><div class="rule-index">12</div><div class="rule-message">प्रत्येक माह के 10 तारीख तक सभी छात्रों का हॉस्टल-शुल्क निश्चित रूप जमा कर देना है, अन्यथा प्रतिदिन 20 रुपये दंड शुल्क वसूला जाएगा।</div></div>
+      <div class="rule-tile"><div class="rule-index">13</div><div class="rule-message">हॉस्टल छोड़ने की सूचना एक माह पहले आवेदन के माध्यम से हॉस्टल कार्यालय में देना अनिवार्य होगा।</div></div>
+      <div class="rule-tile"><div class="rule-index">14</div><div class="rule-message">निर्धारित शुल्क में किसी तरह की रियायत नहीं दी जायेगी, चाहे हॉस्टल में उपस्थित रहें या नहीं रहें, शुल्क पूरे माह का ही लगेगा।</div></div>
+      <div class="rule-tile"><div class="rule-index">15</div><div class="rule-message">बिना व्यवस्थापक से पूछे रूम चेंज नहीं करना है।</div></div>
+      <div class="rule-tile"><div class="rule-index">16</div><div class="rule-message">हॉस्टल में नामांकन रद्द करने की स्थिति में 15 दिनों का शुल्क देना होगा।</div></div>
+      <div class="rule-tile"><div class="rule-index">17</div><div class="rule-message">हॉस्टल परिसर के अंदर शोर-शराबा का स्तर संगीत प्रणाली की मात्रा कम रखा जाना है।</div></div>
+      <div class="rule-tile"><div class="rule-index">18</div><div class="rule-message">व्यवस्थापक किसी भी छात्र को कभी भी छात्रावास के नियमों के उल्लंघन करने पर निष्कासित करने के लिए स्वतंत्र होगा।</div></div>
+      <div class="rule-tile"><div class="rule-index">19</div><div class="rule-message">रात्रि 10 बजे के पहले हॉस्टल में आ जाना अनिवार्य होगा।</div></div>
+      <div class="rule-tile"><div class="rule-index">20</div><div class="rule-message">कमरे की साफ-सफाई स्वयं छात्रों को करनी होगी।</div></div>
+      <div class="rule-tile"><div class="rule-index">21</div><div class="rule-message">भोजन समय पर कर लें अन्यथा समय समाप्त होने के बाद भोजन रहने पर ही मिलेगा।</div></div>
+      <div class="rule-tile"><div class="rule-index">22</div><div class="rule-message">चिकित्सीय सेवा का चार्ज अलग से देना होगा।</div></div>
+      <div class="rule-tile"><div class="rule-index">23</div><div class="rule-message">हॉस्टल में रहने के दौरान महीने के बीच में हॉस्टल खाली करते है तो दिया हुआ पेमेंट किसी भी परिस्थिति में वापस नहीं किया जायेगा।</div></div>
+      <div class="rule-tile"><div class="rule-index">24</div><div class="rule-message">हॉस्टल खाली करने के 1 माह पूर्व कार्यालय में लिखित सूचना देना अनिवार्य है अन्यथा दिया हुआ जमानत राशि किसी भी परिस्थिति में वापस नहीं किया जायेगा।</div></div>
+      <div class="rule-tile"><div class="rule-index">25</div><div class="rule-message">हॉस्टल में किसी भी प्रकार के बदसलूकी करने पर हॉस्टल खाली करने के बाध्य होंगे।</div></div>
+      <div class="rule-tile"><div class="rule-index">26</div><div class="rule-message">हॉस्टल में माता-पिता के अलावे किसी को भी लाते है तो प्रत्येक दिन 400 रुपया देना होगा।</div></div>
     </div>
   </section>
 
@@ -780,7 +773,6 @@ footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--tex
     <div class="iframe-canvas-backdrop">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.0!2d85.1728!3d25.6092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed5985f3d07b3d%3A0x7ffb046ce37fa6cf!2sNaitik%20Boys%20Hostel!5e0!3m2!1sen!2sin!4v1716800000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-
     <div class="floating-contact-panel reveal">
       <div class="terminal-contact-box">
         <div class="terminal-top-banner">
@@ -788,32 +780,27 @@ footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--tex
           <p>Patna, Bihar — Realtime Communications Operations Center</p>
         </div>
         <div class="terminal-core-body">
-          
           <div class="contact-row-node">
             <div class="node-circle-wrap">
               <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
             </div>
             <div class="node-details-wrap"><label>Direct Hotlines Support</label><a href="tel:9431202864">9431202864</a></div>
           </div>
-
           <div class="contact-row-node">
             <div class="node-circle-wrap">
               <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
             </div>
             <div class="node-details-wrap"><label>Instant WhatsApp Allocation</label><a href="https://wa.me/918210129003" target="_blank">8210129003</a></div>
           </div>
-
           <div class="contact-row-node">
             <div class="node-circle-wrap">
               <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
             </div>
             <div class="node-details-wrap"><label>Physical Landmark Destination</label><p style="font-size:14.5px; font-weight:700; line-height:1.45;">Machhli Mandi, Near Jai Hanuman Colony, Musallahpur Hat, Bazar Samiti, Bahadurpur, Patna 800006</p></div>
           </div>
-
           <div class="pipeline-gps-link">
             <a href="https://www.google.com/maps/dir//Naitik+Boys+Hostel,+Machhli+Mandi,+near+Jai+Hanuman+Colony,+Musallahpur+Hat,+Bazar+Samiti,+Bahadurpur,+Patna,+Bihar+800006" target="_blank">Launch Live GPS Track Map Alignment →</a>
           </div>
-          
         </div>
       </div>
     </div>
@@ -838,7 +825,7 @@ footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--tex
       </ul>
     </div>
     <div class="footer-links-column">
-      <h4>Corporate Support Support</h4>
+      <h4>Corporate Support</h4>
       <ul class="footer-nav-links" style="pointer-events:none; opacity:0.85;">
         <li>📞 Hotline Support: 9431202864</li>
         <li>📍 Location: Musallahpur Hat, Patna</li>
@@ -896,7 +883,6 @@ footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--tex
 </div>
 
 <script>
-/* SEAMLESS ASPECT-RATIO PRESERVING HERO CAROUSEL ENGINE */
 const track = document.getElementById('carouselTrack');
 const slides = document.querySelectorAll('.carousel-slide');
 const dots   = document.querySelectorAll('.carousel-dot');
@@ -906,8 +892,6 @@ function pushSlidePosition(targetIndex) {
   slides[activeIndex].classList.remove('active');
   dots[activeIndex].classList.remove('active');
   activeIndex = (targetIndex + slides.length) % slides.length;
-  
-  // Hardware-accelerated translate3d layer ensures buttery transitions on mobile GPUs
   track.style.transform = `translate3d(-${(activeIndex * 100) / slides.length}%, 0, 0)`;
   slides[activeIndex].classList.add('active');
   dots[activeIndex].classList.add('active');
@@ -921,18 +905,13 @@ document.getElementById('nextBtn').onclick = () => { pushSlidePosition(activeInd
 document.getElementById('prevBtn').onclick = () => { pushSlidePosition(activeIndex - 1); resetCarouselTimer(); };
 dots.forEach((d, i) => d.addEventListener('click', () => { pushSlidePosition(i); resetCarouselTimer(); }));
 
-/* ════════════════════════════════════════
-   DYNAMIC RICH GALLERY SLIDER LOGIC 🌟
-════════════════════════════════════════ */
+/* GALLERY ENGINE (23 SLIDES) */
 const gTrack = document.getElementById('galleryTrack');
-const gSlides = document.querySelectorAll('.gallery-slide');
 const gDotsContainer = document.getElementById('galleryDots');
 let gIndex = 0;
-// totalGSlides updated dynamically to reflect 17 images inside track matrix loops
-const totalGSlides = 17;
+const totalGSlides = 23;
 let gTimer;
 
-// Generate 17 Dots layout checks frameworks
 for(let i=0; i<totalGSlides; i++) {
   const dot = document.createElement('button');
   dot.classList.add('gallery-dot');
@@ -945,11 +924,8 @@ const gDots = document.querySelectorAll('.gallery-dot');
 function moveGalleryTo(targetIndex) {
   gDots[gIndex].classList.remove('active');
   gIndex = (targetIndex + totalGSlides) % totalGSlides;
-  
-  // Optimized translate matrix calculations aligned for 17 slides parameters
   const translatePercent = -(gIndex * (100 / totalGSlides));
   gTrack.style.transform = `translate3d(${translatePercent}%, 0, 0)`;
-  gDots[gIndex].append;
   gDots[gIndex].classList.add('active');
 }
 
@@ -960,13 +936,10 @@ startGalleryLoop();
 document.getElementById('galleryNext').onclick = () => { moveGalleryTo(gIndex + 1); resetGalleryTimer(); };
 document.getElementById('galleryPrev').onclick = () => { moveGalleryTo(gIndex - 1); resetGalleryTimer(); };
 
-
-/* ADAPTS NAVBAR HEIGHT CAPSULE SEAMLESSLY UPON SCROLL OVER 40PX */
 window.addEventListener('scroll', () => {
   document.getElementById('headerWrapper').classList.toggle('scrolled', window.scrollY > 40);
 }, {passive:true});
 
-/* OVERLAY SWAP DRAWER PANEL ON MOBILE DEVICES */
 const ham = document.getElementById('hamburger');
 const mobileOverlay = document.getElementById('mobileOverlay');
 ham.onclick = () => {
@@ -980,15 +953,11 @@ function closeMobile() {
   document.body.style.overflow = '';
 }
 
-/* Lightbox Bascodes Active */
 const lightbox = document.getElementById('lightbox');
 const lbImg = document.getElementById('lbImg');
 function openLb(src) { lbImg.src = src; lightbox.classList.add('open'); document.body.style.overflow = 'hidden'; }
 function closeLb() { lightbox.classList.remove('open'); document.body.style.overflow = ''; }
 
-/* ════════════════════════════════════════
-   AUTOMATED ENQUIRY POPUP (2-SEC DELAY)
-════════════════════════════════════════ */
 const enquiryModal = document.getElementById('enquiryModal');
 const closePopupBtn = document.getElementById('closePopupBtn');
 const popupEnquiryForm = document.getElementById('popupEnquiryForm');
@@ -1005,14 +974,12 @@ popupEnquiryForm.onsubmit = (e) => {
   const phone = document.getElementById('studentPhone').value;
   const room = document.getElementById('roomPreference').value;
   
-  const formattedPayload = `Hello Naitik Boy's Hostel, I would like to enquire about room admission availability:\n\n• Name: ${name}\n• Mobile Number: ${phone}\n• Selected Category: ${room}\n\nPlease share seat availability status and onboarding process.`;
-  
+  const formattedPayload = `Hello Naitik Boy's Hostel, I would like to enquire about room admission availability:\n\n• Name: ${name}\n• Mobile Number: ${phone}\n• Selected Category: ${room}\n\nPlease share seat availability status.`;
   const forwardTargetUrl = `https://wa.me/918210129003?text=${encodeURIComponent(formattedPayload)}`;
   window.open(forwardTargetUrl, '_blank');
   enquiryModal.classList.remove('show');
 };
 
-/* KINETIC INTERSECTION REVEAL ENGINE */
 const viewObserver = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('in'); viewObserver.unobserve(e.target); }
