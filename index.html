@@ -595,89 +595,98 @@ footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--tex
 .careers-note { font-size: 12.5px; color: var(--text-muted); text-align: center; font-weight: 500; line-height: 1.5; }
 
 /* ════════════════════════════════════════
-   DATE-TIME + VISITOR COUNTER WIDGET
+   DATE-TIME + VISITOR COUNTER — NAVBAR STRIP
 ════════════════════════════════════════ */
-.info-float-panel {
-  position: fixed; bottom: 90px; right: 16px; z-index: 997;
-  display: flex; flex-direction: column; gap: 10px;
-  pointer-events: none;
+.info-strip {
+  position: fixed; top: 38px; left: 0; right: 0; z-index: 999;
+  height: 36px; background: rgba(15,23,42,0.97); backdrop-filter: blur(12px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 3%; border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-family: 'Manrope', sans-serif;
 }
-/* Date-Time Card */
-.datetime-card {
-  background: rgba(15,23,42,0.92); backdrop-filter: blur(20px);
-  border-radius: 16px; padding: 12px 16px; min-width: 188px;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.08);
-  pointer-events: auto;
-  animation: floatIn 0.6s cubic-bezier(0.16,1,0.3,1) both;
-}
-.dtc-time { font-size: 26px; font-weight: 800; color: #fff; letter-spacing: -0.5px; line-height: 1; font-family: 'Urbanist', sans-serif; }
-.dtc-time span { color: var(--brand-orange); font-size: 14px; font-weight: 700; margin-left: 3px; }
-.dtc-date { font-size: 12px; color: rgba(255,255,255,0.55); font-weight: 600; margin-top: 4px; }
-.dtc-day  { font-size: 11px; color: rgba(255,255,255,0.35); font-weight: 600; margin-top: 2px; letter-spacing: 0.5px; text-transform: uppercase; }
+.is-left { display: flex; align-items: center; gap: 18px; }
+.is-right { display: flex; align-items: center; gap: 16px; }
 
-/* Visitor Counter Card */
-.visitor-card {
-  background: rgba(15,23,42,0.92); backdrop-filter: blur(20px);
-  border-radius: 16px; padding: 12px 16px; min-width: 188px;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.08);
-  pointer-events: auto;
-  animation: floatIn 0.6s 0.15s cubic-bezier(0.16,1,0.3,1) both;
-}
-.vc-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
-.vc-label { font-size: 10.5px; font-weight: 700; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px; }
-.vc-online { display: flex; align-items: center; gap: 6px; }
-.vc-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 8px #22c55e; animation: pulse-dot 1.8s ease-in-out infinite; }
-.vc-online-num { font-size: 18px; font-weight: 800; color: #22c55e; font-family: 'Urbanist', sans-serif; }
-.vc-online-lbl { font-size: 10px; color: rgba(255,255,255,0.45); font-weight: 600; }
-.vc-divider { height: 1px; background: rgba(255,255,255,0.06); margin: 6px 0; }
-.vc-total-row { display: flex; align-items: center; justify-content: space-between; }
-.vc-total-num { font-size: 16px; font-weight: 800; color: rgba(255,255,255,0.85); font-family: 'Urbanist', sans-serif; }
-.vc-total-lbl { font-size: 10px; color: rgba(255,255,255,0.35); font-weight: 600; }
+/* Clock */
+.is-clock { display: flex; align-items: baseline; gap: 4px; }
+.is-clock-time { font-size: 15px; font-weight: 800; color: #fff; letter-spacing: -0.3px; font-family: 'Urbanist', sans-serif; }
+.is-clock-ampm { font-size: 10px; font-weight: 700; color: var(--brand-orange); }
+.is-clock-date { font-size: 11px; color: rgba(255,255,255,0.45); font-weight: 600; }
 
-@keyframes floatIn {
-  from { opacity: 0; transform: translateX(30px); }
-  to   { opacity: 1; transform: translateX(0); }
+/* Online dot + count */
+.is-online { display: flex; align-items: center; gap: 5px; }
+.is-dot { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 6px #22c55e; animation: pdot 1.8s ease-in-out infinite; flex-shrink: 0; }
+.is-online-txt { font-size: 11.5px; font-weight: 700; color: rgba(255,255,255,0.7); }
+.is-online-num { color: #22c55e; font-weight: 800; }
+
+/* Total visits */
+.is-total { display: flex; align-items: center; gap: 5px; }
+.is-total-txt { font-size: 11.5px; font-weight: 700; color: rgba(255,255,255,0.5); }
+.is-total-num { font-size: 12px; font-weight: 800; color: rgba(255,255,255,0.85); }
+
+/* Day badge */
+.is-day { font-size: 10.5px; font-weight: 700; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 1px; }
+
+@keyframes pdot {
+  0%,100% { opacity:1; transform:scale(1); }
+  50% { opacity:0.5; transform:scale(1.35); }
 }
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.6; transform: scale(1.3); }
-}
+
+/* Adjust ticker + header to account for strip */
+.ticker-container { top: 74px !important; }
+.header-wrapper   { top: 112px !important; }
+body              { padding-top: 182px !important; }
 
 @media (max-width: 768px) {
-  .info-float-panel { bottom: 78px; right: 10px; }
-  .datetime-card, .visitor-card { min-width: 160px; padding: 10px 13px; }
-  .dtc-time { font-size: 22px; }
+  .info-strip { height: 32px; padding: 0 4%; }
+  .is-clock-time { font-size: 13px; }
+  .is-day { display: none; }
+  .is-total-txt { display: none; }
+  .is-clock-date { display: none; }
+  .is-online-txt { font-size: 11px; }
+  .ticker-container { top: 70px !important; }
+  .header-wrapper   { top: 108px !important; }
+  body              { padding-top: 178px !important; }
+}
+
+/* ════════════════════════════════════════
+   CAREERS MOBILE FIXES
+════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .careers-section { padding: 60px 5% 70px; }
+  .careers-grid { grid-template-columns: 1fr; gap: 30px; }
+  .careers-roles-panel { order: 2; }
+  .careers-form-panel  { order: 1; }
+  .careers-form-header { padding: 22px 20px; }
+  .careers-form-header h3 { font-size: 20px; }
+  .careers-form-body { padding: 20px; gap: 14px; }
+  .careers-perks { grid-template-columns: 1fr; gap: 8px; }
+  .careers-form-box { border-radius: 16px; }
+  .careers-submit-btn { font-size: 15px; height: 50px; }
 }
 </style>
 <body>
 
-<!-- ═══ FLOATING INFO PANEL: DATE-TIME + VISITOR COUNTER ═══ -->
-<div class="info-float-panel">
-
-  <!-- Date & Time Card -->
-  <div class="datetime-card">
-    <div class="dtc-time" id="dtcTime">--:--<span id="dtcAmpm">--</span></div>
-    <div class="dtc-date" id="dtcDate">Loading...</div>
-    <div class="dtc-day"  id="dtcDay">---</div>
-  </div>
-
-  <!-- Visitor Counter Card -->
-  <div class="visitor-card">
-    <div class="vc-row">
-      <span class="vc-label">Online Now</span>
-      <div class="vc-online">
-        <div class="vc-dot"></div>
-        <span class="vc-online-num" id="vcOnline">--</span>
-      </div>
+<!-- ═══ INFO STRIP: DATE-TIME + VISITOR COUNTER ═══ -->
+<div class="info-strip" id="infoStrip">
+  <div class="is-left">
+    <div class="is-clock">
+      <span class="is-clock-time" id="isTime">--:--</span>
+      <span class="is-clock-ampm" id="isAmpm">--</span>
     </div>
-    <span class="vc-online-lbl">Live visitors on site</span>
-    <div class="vc-divider"></div>
-    <div class="vc-total-row">
-      <span class="vc-total-lbl">Total Visits</span>
-      <span class="vc-total-num" id="vcTotal">--</span>
+    <span class="is-clock-date" id="isDate">Loading...</span>
+    <span class="is-day" id="isDay">---</span>
+  </div>
+  <div class="is-right">
+    <div class="is-online">
+      <div class="is-dot"></div>
+      <span class="is-online-txt"><span class="is-online-num" id="isOnline">--</span> Online</span>
+    </div>
+    <div class="is-total">
+      <span class="is-total-txt">Total Visits:</span>
+      <span class="is-total-num" id="isTotal">--</span>
     </div>
   </div>
-
 </div>
 
 <!-- ═══ SEO CONTENT BLOCK (Screen readers + Google crawlers) ═══ -->
@@ -1466,15 +1475,12 @@ function updateClock() {
   const m = now.getMinutes().toString().padStart(2,'0');
   const ampm = h >= 12 ? 'PM' : 'AM';
   h = h % 12 || 12;
-  document.getElementById('dtcTime').innerHTML = h + ':' + m + '<span> ' + ampm + '</span>';
-  const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  document.getElementById('isTime').textContent = h + ':' + m;
+  document.getElementById('isAmpm').textContent = ampm;
+  const days   = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
   const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  const day  = days[now.getDay()];
-  const date = now.getDate();
-  const mon  = months[now.getMonth()];
-  const yr   = now.getFullYear();
-  document.getElementById('dtcDate').textContent = date + ' ' + mon + ' ' + yr;
-  document.getElementById('dtcDay').textContent  = day + ' — IST';
+  document.getElementById('isDate').textContent = now.getDate() + ' ' + months[now.getMonth()] + ' ' + now.getFullYear();
+  document.getElementById('isDay').textContent  = days[now.getDay()] + ' · IST';
 }
 updateClock();
 setInterval(updateClock, 1000);
@@ -1496,7 +1502,7 @@ setInterval(updateClock, 1000);
     if (n >= 1000) return (n/1000).toFixed(1).replace(/\.0$/, '') + 'K';
     return n.toString();
   }
-  document.getElementById('vcTotal').textContent = fmtNum(total);
+  document.getElementById('isTotal').textContent = fmtNum(total);
 
   const NOW = Date.now();
   const WINDOW_MS = 3 * 60 * 1000;
@@ -1507,16 +1513,14 @@ setInterval(updateClock, 1000);
   if (myIdx >= 0) onlineArr[myIdx] = NOW; else onlineArr.push(NOW);
   localStorage.setItem(ONLINE_KEY, JSON.stringify(onlineArr));
 
-  const ghostBase = 3;
-  const ghostExtra = Math.floor(NOW / (5 * 60 * 1000)) % 5;
-  const ghostCount = ghostBase + ghostExtra;
+  const ghostCount = 3 + (Math.floor(NOW / (5 * 60 * 1000)) % 5);
 
   function updateOnlineDisplay() {
     const t = Date.now();
     let arr = [];
     try { arr = JSON.parse(localStorage.getItem(ONLINE_KEY) || '[]'); } catch(e) {}
     arr = arr.filter(function(ts){ return t - ts < WINDOW_MS; });
-    document.getElementById('vcOnline').textContent = arr.length + ghostCount;
+    document.getElementById('isOnline').textContent = arr.length + ghostCount;
     localStorage.setItem(ONLINE_KEY, JSON.stringify(arr));
   }
   updateOnlineDisplay();
