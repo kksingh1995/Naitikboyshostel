@@ -463,6 +463,14 @@ footer { background: var(--bg-gradient); padding: 80px 8% 40px; color: var(--tex
 .footer-nav-links { display: flex; flex-direction: column; gap: 13px; list-style: none; }
 .footer-nav-links a { font-weight: 600; color: var(--text-body); transition: var(--transition); }
 .footer-nav-links a:hover { color: var(--brand-orange); transform: translateX(3px); }
+.social-icons-row { display: flex; gap: 12px; margin-top: 18px; }
+.social-icons-row a { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--bg-card); border: 1px solid rgba(0,0,0,0.08); transition: var(--transition); color: var(--text-body); }
+.social-icons-row a:hover { background: var(--brand-orange); color: #fff; transform: translateY(-3px); border-color: var(--brand-orange); }
+.social-icons-row svg { width: 18px; height: 18px; fill: currentColor; }
+.nav-social-icons { display: flex; gap: 10px; align-items: center; margin-right: 6px; }
+.nav-social-icons a { width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.05); color: var(--text-body); transition: var(--transition); }
+.nav-social-icons a:hover { background: var(--brand-orange); color: #fff; }
+.nav-social-icons svg { width: 16px; height: 16px; fill: currentColor; }
 .footer-base-strip { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; font-size: 14px; color: var(--text-muted); font-weight: 500; }
 
 /* WHATSAPP MODAL POPUP ENGINE */
@@ -715,6 +723,7 @@ body              { padding-top: 182px !important; }
 
     <div class="nav-center">
       <a href="#about">About</a>
+      <a href="#about-us">About Us</a>
       <a href="#rooms">Rooms</a>
       <a href="#facilities">Facilities</a>
       <a href="#food-menu">Food Diet Chart</a>
@@ -726,6 +735,14 @@ body              { padding-top: 182px !important; }
     </div>
 
     <div class="nav-right">
+      <div class="nav-social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61580752444482" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.41c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.06 1.97.24 2.43.41.61.23 1.05.51 1.51.97.46.46.74.9.97 1.51.17.46.35 1.26.41 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.06 1.17-.24 1.97-.41 2.43-.23.61-.51 1.05-.97 1.51-.46.46-.9.74-1.51.97-.46.17-1.26.35-2.43.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.06-1.97-.24-2.43-.41-.61-.23-1.05-.51-1.51-.97-.46-.46-.74-.9-.97-1.51-.17-.46-.35-1.26-.41-2.43-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.06-1.17.24-1.97.41-2.43.23-.61.51-1.05.97-1.51.46-.46.9-.74 1.51-.97.46-.17 1.26-.35 2.43-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.62c-.79.31-1.46.72-2.13 1.39C1.34 2.68.93 3.35.62 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.55 2.91.31.79.72 1.46 1.39 2.13.67.67 1.34 1.08 2.13 1.39.76.29 1.64.49 2.91.55C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.55.79-.31 1.46-.72 2.13-1.39.67-.67 1.08-1.34 1.39-2.13.29-.76.49-1.64.55-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.55-2.91a5.6 5.6 0 0 0-1.39-2.13A5.6 5.6 0 0 0 19.86.62c-.76-.29-1.64-.49-2.91-.55C15.67.01 15.26 0 12 0z"/><path d="M12 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.41-9.85a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg>
+        </a>
+      </div>
       <a href="tel:9431202864" class="nav-action-btn">Book Space Now</a>
       <button class="hamburger" id="hamburger" aria-label="Menu Mobile Controller Trigger Toggle">
         <span></span><span></span><span></span>
@@ -736,6 +753,7 @@ body              { padding-top: 182px !important; }
 
 <div class="mobile-overlay" id="mobileOverlay">
   <a href="#about" onclick="closeMobile()">About Hostel</a>
+  <a href="#about-us" onclick="closeMobile()">About Us</a>
   <a href="#rooms" onclick="closeMobile()">Sharing Options</a>
   <a href="#facilities" onclick="closeMobile()">Amenities Deck</a>
   <a href="#food-menu" onclick="closeMobile()">Food Diet Chart</a>
@@ -863,7 +881,27 @@ body              { padding-top: 182px !important; }
     </div>
   </section>
 
-  <section id="rooms">
+  <section id="about-us">
+    <div class="about-grid">
+      <div class="about-text-column reveal">
+        <span class="section-badge">Hamari Kahani</span>
+        <h2 class="section-title">About <span>Us</span></h2>
+        <p class="section-desc">Naitik Boy's Hostel ki shuruwat ek simple soch se hui thi — Patna aane wale students ko ek aisa ghar jaisa, surakshit aur affordable accommodation milе jahan unke parents bhi tension-free rahein. Aaj hum Bazar Samiti, Bahadurpur, Musallahpur Hat area mein hostel chala rahe hain aur sainkdo students ko unke career ki manzil tak pahunchne mein madad kar rahe hain.</p>
+        <div class="about-bullets">
+          <div class="bullet-node"><span class="bullet-icon">🎯</span><p><strong>Hamara Mission:</strong> Students ko ek clean, safe aur disciplined environment dena jisse wo apni padhai aur career par poora focus kar sakein.</p></div>
+          <div class="bullet-node"><span class="bullet-icon">🤝</span><p><strong>Hamari Values:</strong> Honesty, hygiene aur har student ke saath apne ghar jaisa vyavhar — yahi Naitik Boy's Hostel ki pehchaan hai.</p></div>
+          <div class="bullet-node"><span class="bullet-icon">🏆</span><p><strong>Founder's Vision:</strong> Management ka maksud hai Patna ke har bahar se aane wale student ko best-in-class living experience dena, taaki ghar ki yaad kam aaye aur padhai mein man lage.</p></div>
+        </div>
+        <div style="margin-top:14px;">
+          <a href="tel:9431202864" class="nav-action-btn" style="padding:15px 32px; display:inline-block; font-size:15px;">📞 Hamse Baat Karein</a>
+        </div>
+      </div>
+      <div class="about-image-layout reveal delay-1">
+        <img class="ab-img-one" src="https://res.cloudinary.com/dait7s8vv/image/upload/v1779876199/building_a3xylk.jpg" alt="Naitik Boy's Hostel Building">
+        <img class="ab-img-two" src="https://res.cloudinary.com/dait7s8vv/image/upload/v1779862663/gallary3_peovdm.jpg" alt="Naitik Boy's Hostel Room Setup">
+      </div>
+    </div>
+  </section>
     <div class="section-header reveal">
       <span class="section-badge">Comfort Space Options</span>
       <h2 class="section-title">Our Premium <span>Room Sharing Tiers</span></h2>
@@ -970,9 +1008,9 @@ body              { padding-top: 182px !important; }
         <thead>
           <tr>
             <th>Days</th>
-            <th>Breakfast (7:30 AM to 9:30 AM)</th>
-            <th>Lunch (12:30 PM to 1:30 PM)</th>
-            <th>Dinner (7:30 PM to 9:30 PM)</th>
+            <th>Breakfast (8:15 AM to 9:30 AM)</th>
+            <th>Lunch (1:15 PM to 2:30 PM)</th>
+            <th>Dinner (8:15 PM to 9:30 PM)</th>
           </tr>
         </thead>
         <tbody>
@@ -1190,70 +1228,70 @@ body              { padding-top: 182px !important; }
   <section id="careers" class="careers-section">
     <div class="careers-inner">
       <div class="section-header reveal">
-        <span class="section-badge">Join Our Team</span>
-        <h2 class="section-title">We Are <span>Hiring!</span> 🚀</h2>
-        <p class="section-desc">Naitik Boy's Hostel mein kaam karo, grow karo. Hamari team ek strong, dedicated aur passionate log se bani hai — kya tum ready ho?</p>
+        <span class="section-badge">हमारी टीम जॉइन करें</span>
+        <h2 class="section-title">हम <span>नौकरी</span> दे रहे हैं! 🚀</h2>
+        <p class="section-desc">नायतिक ब्यॉयज़ हॉस्टल में काम करें, आगे बढ़ें। हमारी टीम मज़बूत, ईमानदार और जोशीले लोगों से बनी है — क्या आप तैयार हैं?</p>
       </div>
       <div class="careers-grid">
         <div class="careers-roles-panel reveal">
-          <h3 class="roles-heading">Open Positions</h3>
-          <div class="role-card"><div class="role-icon">🍳</div><div><div class="role-title">Mess Cook / Chef</div><div class="role-meta">Full-time · Bahadurpur, Patna</div></div></div>
-          <div class="role-card"><div class="role-icon">🛡️</div><div><div class="role-title">Security Guard</div><div class="role-meta">Night Shift · Bahadurpur, Patna</div></div></div>
-          <div class="role-card"><div class="role-icon">🧹</div><div><div class="role-title">Housekeeping Staff</div><div class="role-meta">Full-time · Bahadurpur, Patna</div></div></div>
-          <div class="role-card"><div class="role-icon">📋</div><div><div class="role-title">Hostel Manager / Caretaker</div><div class="role-meta">Full-time · Bahadurpur, Patna</div></div></div>
-          <div class="role-card"><div class="role-icon">💼</div><div><div class="role-title">Front Desk / Office Assistant</div><div class="role-meta">Full-time · Bahadurpur, Patna</div></div></div>
+          <h3 class="roles-heading">खाली पदों की सूची</h3>
+          <div class="role-card"><div class="role-icon">🍳</div><div><div class="role-title">मेस कुक / शेफ़</div><div class="role-meta">फुल-टाइम · बहादुरपुर, पटना</div></div></div>
+          <div class="role-card"><div class="role-icon">🛡️</div><div><div class="role-title">सिक्योरिटी गार्ड</div><div class="role-meta">नाइट शिफ्ट · बहादुरपुर, पटना</div></div></div>
+          <div class="role-card"><div class="role-icon">🧹</div><div><div class="role-title">हाउसकीपिंग स्टाफ</div><div class="role-meta">फुल-टाइम · बहादुरपुर, पटना</div></div></div>
+          <div class="role-card"><div class="role-icon">📋</div><div><div class="role-title">हॉस्टल मैनेजर / केयरटेकर</div><div class="role-meta">फुल-टाइम · बहादुरपुर, पटना</div></div></div>
+          <div class="role-card"><div class="role-icon">💼</div><div><div class="role-title">फ्रंट डेस्क / ऑफिस सहायक</div><div class="role-meta">फुल-टाइम · बहादुरपुर, पटना</div></div></div>
           <div class="careers-perks">
-            <div class="perk-item">✅ Salary On Time</div>
-            <div class="perk-item">✅ Comfortable Work Environment</div>
-            <div class="perk-item">✅ Free Meals During Duty</div>
-            <div class="perk-item">✅ Growth Opportunity</div>
+            <div class="perk-item">✅ समय पर वेतन</div>
+            <div class="perk-item">✅ आरामदायक कार्य वातावरण</div>
+            <div class="perk-item">✅ ड्यूटी के दौरान मुफ्त भोजन</div>
+            <div class="perk-item">✅ तरक्की का मौका</div>
           </div>
         </div>
         <div class="careers-form-panel reveal delay-1">
           <div class="careers-form-box">
             <div class="careers-form-header">
-              <div class="cfh-badge">Apply Now</div>
-              <h3>Submit Your Application</h3>
-              <p>Form fill karo, hum turant WhatsApp pe contact karenge!</p>
+              <div class="cfh-badge">अभी आवेदन करें</div>
+              <h3>अपना आवेदन भेजें</h3>
+              <p>फॉर्म भरें, हम जल्द ही व्हाट्सएप पर संपर्क करेंगे!</p>
             </div>
             <div class="careers-form-body">
               <div class="form-input-node">
-                <label for="careerName">Aapka Pura Naam *</label>
-                <input type="text" id="careerName" placeholder="e.g. Ravi Kumar">
+                <label for="careerName">आपका पूरा नाम *</label>
+                <input type="text" id="careerName" placeholder="जैसे - रवि कुमार">
               </div>
               <div class="form-input-node">
-                <label for="careerPhone">WhatsApp Number *</label>
-                <input type="tel" id="careerPhone" placeholder="e.g. 9876543210" pattern="[0-9]{10}">
+                <label for="careerPhone">व्हाट्सएप नंबर *</label>
+                <input type="tel" id="careerPhone" placeholder="जैसे - 9876543210" pattern="[0-9]{10}">
               </div>
               <div class="form-input-node">
-                <label for="careerPost">Kaunse Post Ke Liye Apply Kar Rahe Ho? *</label>
+                <label for="careerPost">किस पद के लिए आवेदन कर रहे हैं? *</label>
                 <select id="careerPost">
-                  <option value="" disabled selected>Post Select Karo</option>
-                  <option value="Mess Cook / Chef">🍳 Mess Cook / Chef</option>
-                  <option value="Security Guard">🛡️ Security Guard</option>
-                  <option value="Housekeeping Staff">🧹 Housekeeping Staff</option>
-                  <option value="Hostel Manager / Caretaker">📋 Hostel Manager / Caretaker</option>
-                  <option value="Front Desk / Office Assistant">💼 Front Desk / Office Assistant</option>
-                  <option value="Other">📌 Kuch Aur</option>
+                  <option value="" disabled selected>पद चुनें</option>
+                  <option value="Mess Cook / Chef">🍳 मेस कुक / शेफ़</option>
+                  <option value="Security Guard">🛡️ सिक्योरिटी गार्ड</option>
+                  <option value="Housekeeping Staff">🧹 हाउसकीपिंग स्टाफ</option>
+                  <option value="Hostel Manager / Caretaker">📋 हॉस्टल मैनेजर / केयरटेकर</option>
+                  <option value="Front Desk / Office Assistant">💼 फ्रंट डेस्क / ऑफिस सहायक</option>
+                  <option value="Other">📌 कुछ और</option>
                 </select>
               </div>
               <div class="form-input-node">
-                <label for="careerExp">Experience (Optional)</label>
-                <input type="text" id="careerExp" placeholder="e.g. 2 saal ka kaam kar chuka hoon">
+                <label for="careerExp">अनुभव (वैकल्पिक)</label>
+                <input type="text" id="careerExp" placeholder="जैसे - 2 साल का काम कर चुका हूँ">
               </div>
               <div class="form-input-node">
-                <label>Resume Upload (Optional)</label>
+                <label>रिज़्यूमे अपलोड करें (वैकल्पिक)</label>
                 <div class="resume-upload-zone" onclick="document.getElementById('careerResume').click()">
                   <input type="file" id="careerResume" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" style="display:none;" onchange="handleResumeSelect(this)">                  <div class="upload-icon">📎</div>
-                  <div class="upload-text" id="uploadText">Click karke resume ya photo upload karo</div>
-                  <div class="upload-hint">PDF, DOC, Image — Max 5MB</div>
+                  <div class="upload-text" id="uploadText">क्लिक करके रिज़्यूमे या फोटो अपलोड करें</div>
+                  <div class="upload-hint">PDF, DOC, फोटो — अधिकतम 5MB</div>
                 </div>
               </div>
               <button class="careers-submit-btn" onclick="submitCareerForm()">
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.878-1.42A9.933 9.933 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.946 7.946 0 01-4.282-1.248l-.306-.184-3.187.928.966-3.095-.2-.318A7.96 7.96 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
-                WhatsApp Pe Apply Bhejo
+                व्हाट्सएप पर आवेदन भेजें
               </button>
-              <p class="careers-note">* Hum 24 ghante mein WhatsApp pe reply karenge. Resume upload ki image bhi message mein share hogi.</p>
+              <p class="careers-note">* हम 24 घंटे में व्हाट्सएप पर जवाब देंगे। रिज़्यूमे की फोटो भी मैसेज में शेयर होगी।</p>
             </div>
           </div>
         </div>
@@ -1269,12 +1307,21 @@ body              { padding-top: 182px !important; }
         <h3 class="footer-title-text">Naitik <span>Boy's Hostel</span></h3>
       </div>
       <p class="footer-about">Premium architectural student living staying module layouts in Patna. High performance workspace framework built cleanly for student productivity tracking analytics loop controls checks.</p>
+      <div class="social-icons-row">
+        <a href="https://www.facebook.com/profile.php?id=61580752444482" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.41c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.06 1.97.24 2.43.41.61.23 1.05.51 1.51.97.46.46.74.9.97 1.51.17.46.35 1.26.41 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.06 1.17-.24 1.97-.41 2.43-.23.61-.51 1.05-.97 1.51-.46.46-.9.74-1.51.97-.46.17-1.26.35-2.43.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.06-1.97-.24-2.43-.41-.61-.23-1.05-.51-1.51-.97-.46-.46-.74-.9-.97-1.51-.17-.46-.35-1.26-.41-2.43-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.06-1.17.24-1.97.41-2.43.23-.61.51-1.05.97-1.51.46-.46.9-.74 1.51-.97.46-.17 1.26-.35 2.43-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.62c-.79.31-1.46.72-2.13 1.39C1.34 2.68.93 3.35.62 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.55 2.91.31.79.72 1.46 1.39 2.13.67.67 1.34 1.08 2.13 1.39.76.29 1.64.49 2.91.55C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.55.79-.31 1.46-.72 2.13-1.39.67-.67 1.08-1.34 1.39-2.13.29-.76.49-1.64.55-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.55-2.91a5.6 5.6 0 0 0-1.39-2.13A5.6 5.6 0 0 0 19.86.62c-.76-.29-1.64-.49-2.91-.55C15.67.01 15.26 0 12 0z"/><path d="M12 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.41-9.85a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg>
+        </a>
+      </div>
     </div>
     <div class="footer-links-column">
       <h4>Site Traversal</h4>
       <ul class="footer-nav-links">
         <li><a href="#home">Home Interface</a></li>
         <li><a href="#about">About Core</a></li>
+        <li><a href="#about-us">About Us</a></li>
         <li><a href="#facilities">Facilities Deck</a></li>
         <li><a href="#gallery">Visual Registry</a></li>
         <li><a href="#careers" style="color:var(--brand-orange);">We're Hiring 🔥</a></li>
@@ -1541,15 +1588,15 @@ function submitCareerForm() {
   const resumeInput = document.getElementById('careerResume');
   const hasResume = resumeInput.files && resumeInput.files.length > 0;
 
-  if (!name) { alert('Naam bharna zaroori hai!'); return; }
-  if (!phone || phone.length < 10) { alert('Sahi 10-digit WhatsApp number dalo!'); return; }
-  if (!post) { alert('Post select karna zaroori hai!'); return; }
+  if (!name) { alert('नाम भरना ज़रूरी है!'); return; }
+  if (!phone || phone.length < 10) { alert('सही 10-अंकों का व्हाट्सएप नंबर डालें!'); return; }
+  if (!post) { alert('पद चुनना ज़रूरी है!'); return; }
 
   const resumeInfo = hasResume
-    ? `\n📎 Resume: ${resumeInput.files[0].name} _(File WhatsApp pe manually attach kar dena)_`
-    : '\n📎 Resume: Upload nahi kiya';
+    ? `\n📎 रिज़्यूमे: ${resumeInput.files[0].name} _(फाइल व्हाट्सएप पर खुद अटैच कर दें)_`
+    : '\n📎 रिज़्यूमे: अपलोड नहीं किया';
 
-  const msg = `🔥 *NEW JOB APPLICATION*\n*Naitik Boy's Hostel — Careers*\n\n👤 *Naam:* ${name}\n📱 *WhatsApp:* ${phone}\n💼 *Post:* ${post}${exp ? '\n🧠 *Experience:* ' + exp : ''}${resumeInfo}\n\n_Yeh application website ke Careers page se aayi hai. Please jaldi reply karein._`;
+  const msg = `🔥 *नई नौकरी आवेदन*\n*नायतिक ब्यॉयज़ हॉस्टल — करियर्स*\n\n👤 *नाम:* ${name}\n📱 *व्हाट्सएप:* ${phone}\n💼 *पद:* ${post}${exp ? '\n🧠 *अनुभव:* ' + exp : ''}${resumeInfo}\n\n_यह आवेदन वेबसाइट के Careers पेज से आया है। कृपया जल्दी जवाब दें।_`;
 
   const waUrl = `https://wa.me/918210129003?text=${encodeURIComponent(msg)}`;
   window.open(waUrl, '_blank');
